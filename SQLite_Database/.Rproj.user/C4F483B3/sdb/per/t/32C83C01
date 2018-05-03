@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# notes on creating a database from https://www.r-bloggers.com/r-and-sqlite-part-1/\n\nlibrary(RSQLite)\nlibrary(DBI)\nlibrary(sqldf)\n\n## extract the home directory\nhome_dir<-getwd()\n## set the working directory\nsetwd(\"test_trait_database\")\n## make a new folder to test R creating databases in \n# system(\"mkdir testing_R_db\")\n## reset the working directory\nsetwd(\"testing_R_db\")\n\n## make a new database\ndb <- dbConnect(SQLite(), dbname=\"Test.species.sqlite\")\n\n## write in the tables for tha database\ndbWriteTable(conn = db, name = \"life_form\", value = \"life_form.csv\",\n             row.names = FALSE, header = TRUE)\ndbWriteTable(conn = db, name = \"family\", value = \"family.csv\",\n             row.names = FALSE, header = TRUE)\ndbWriteTable(conn = db, name = \"invasive\", value = \"invasive.csv\",\n             row.names = FALSE, header = TRUE)\ndbWriteTable(conn = db, name = \"species\", value = \"species.csv\",\n             row.names = FALSE, header = TRUE)\ndbWriteTable(conn = db, name = \"genus\", value = \"genus.csv\",\n             row.names = FALSE, header = TRUE)\ndbWriteTable(conn = db, name = \"habit\", value = \"habit.csv\",\n             row.names = FALSE, header = TRUE)\n\n## check the list of tables in the database\ndbListTables(db)                \n\n## query a dataframe of genus and species native status\nspecies.status<-dbGetQuery(db, \"SELECT * FROM genus,invasive INNER JOIN species ON species.genus_id = genus.genus_id AND species.invasive_id = invasive.invasive_id\")\n\n## clean the dataframe by remove the rows with \"_id\"\nspecies.status.clean<-species.status[,-grep(\"id\",names(species.status))]\n\n\n",
+    "created" : 1525309697337.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3227616589",
+    "id" : "32C83C01",
+    "lastKnownWriteTime" : 1525311419,
+    "last_content_update" : 1525311419239,
+    "path" : "/data/Dropbox/Mayfield Lab/FunctionalTraitDatabase/SQLite_Database/test.making.species.db.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

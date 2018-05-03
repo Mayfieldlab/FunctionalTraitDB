@@ -1,0 +1,4 @@
+Inside each project folder
+- original raw file 
+- read me 
+- clean files (projects, field_season, trait_summary, site, treatment, plot?)

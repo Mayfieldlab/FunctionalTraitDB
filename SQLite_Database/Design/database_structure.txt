@@ -1,0 +1,97 @@
+
+Project -> plot (ENV)
+
+------
+block size
+plot size 
+subplot size
+------
+
+PROJECT (this is the master/metadata table)
+Project ID
+Lead researcher 
+email
+Study site (WA, Tas)
+
+------
+PROJECT_TRAITS (reference table)
+field season_id
+traits_collected
+------
+
+FIELD SEASON 
+unique field season ID
+year
+project ID
+trait list 
+crew list (chrissy_trace)
+
+
+PLOT level
+ID
+field season ID
+location
+long/lat
+block
+plot (link to ENV)
+subplot  
+treatment
+/.   \
+
+--
+ENVIRONMENT 
+plot ID 
+abiotic (soil, ph etc)
+
+SOIL
+plot_id
+value 
+units
+
+PH
+plot_id
+value
+units 
+
+
+--
+INDVIDUAL
+ID
+Species (to species)
+Plot (link to plot)
+Trait (height, sla)
+
+HEIGHT
+inv_id
+Value 
+Unit
+date_collected
+
+SLA
+inv_id
+Value 
+Unit
+date_collected
+
+
+--
+SPECIES level 
+
+ID
+Family 
+Genus
+Species 
+Exotic
+Native 
+Habit
+Annual
+Biannual
+Perennial
+
+height, sla, biomass, longest leaf, leaf area, fecundity, 
+
+
+study trait x, 
+
+
+what traits are available from each project 

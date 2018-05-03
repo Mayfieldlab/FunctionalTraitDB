@@ -1,0 +1,3 @@
+### TEM 17.07.2017
+
+While looking for trait data to use on my first project I noticed that the seed mass data in 'compiled_seed_mass_per_individual.csv' includes seed mass values that are from SURV1 Bendering species. I am unsure if Claire just used the seed mass from John's Survey data alone or if she also collected seed mass within this project herself.

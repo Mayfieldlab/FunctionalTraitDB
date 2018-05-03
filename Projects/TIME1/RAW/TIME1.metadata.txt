@@ -1,0 +1,45 @@
+Project undertaken in Field season 2016 - did not complete due to time constraint.
+
+MEMBERS
+Trace Martyn (leader)
+Julie Guenat
+Margie Mayfield
+
+BREIF DESCRIPTION
+Within each plot ("ID" numbered H001-H100) with density 100% or control (D100) - upto 10 indiviudal ("ind") plants each of the 4 focal species ("SP") were selected and measured over multiple time periods. Plants were marked with a numbered toothpick in the plots and the same individuals were measured across time.
+
+POLE - Podolepis lessonii (not a focal - measured once by mistake)
+POCA - Podolepis cansescens
+VERO - Velleia rosea
+PEAI - Pentameris airoides
+ARCA - Arctotheca calendinia
+
+MEASUREMENTS INCLUDE
+"buds"		- number of buds on individual
+"flowers"	- number of flowers on individual
+"fruits"	- number of fruit (pod/seed heads,etc.) on individual
+"max.height.mm"	- max height of plant (from ground to top of plant standing as-is) in mm 
+"shape.long"	- when looking down on plant from above the longest distance the plant extends (mm)
+"shape.90"	- measurement 90 degrees (perpendicular) to the 'shape.long' measurement (mm)
+"phen"		- phenological code
+	1 - First true leaves (use only once)
+	2 - Early green biomass
+	3 - Peak green biomass (w.o any sign of repro structures - if plant never flower this is the last code before 12)
+	4 - First buds (use only once)
+	5 - Continuing buds
+	6 - First flower (use only once - can have continuing buds as well)
+	7 - Flowering (has continuing flowers and buds)
+	8 - First fruiting (use only once - can have continuing buds/flowers)
+	9 - Fruiting (has continuing fruits/buds/flowers)
+	10 - First seed dispersal (use only once - can have continuing buds/fruits/flowers)
+	11 - Continuing seed dispersal (can have continuing buds/fruits/flowers)
+	12 - Senescence (all seed appears dispersed and plant appears dead)
+"group"		- the set of focals that are in the plot (separated by periods)
+	P - POCA
+	PE - PEAI
+	V - VERO
+	A - ARCA
+"num.focal"	- number of focal species in the plot
+"lateral"	- mean lateral distance (average of 'shape.long' and 'shape.90') (mm)
+"shape"		- mean lateral distance 'lateral' divided by height 'max.height.mm' (mm)
+notes		- any notes that I have included

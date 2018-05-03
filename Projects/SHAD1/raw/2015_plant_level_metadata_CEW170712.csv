@@ -1,0 +1,64 @@
+Col letter,Col name,Explanation 
+A,Plot.ID,Plot ID
+B,Block,Block (of 5 total)
+C,Plot.letter,"within each of the 5 blocks, each plot identified by a letter"
+D,Treatment,Open or had shade cloth over it
+E,Focal.sp,Species ID of this focal individual
+F,Competition,Was the focal individual a solo or was it in a high competition (i.e. normal density) neighbourhood?
+G,Species.comp.combo,Combination of species ID and whether it was a solo or high comp individual
+H ,Species.comp.treatment,"Combination of species ID, whether it was solo or high comp, and whether it was in an open vs shaded plot"
+I,Species.treatment.block,"Combination of species ID, whether it was in open or shade, and which block it was located in (combines solos and high comps)"
+J,Plot.Focalsp.comp.combo,"Combination of plot ID, species ID, solo vs highcomp"
+K,Neighbour.density,number of individuals in interaction neighbourhood (not including self). Zero if the individual is a solo
+L,Focal.height,Height of the high competition individual
+M,Solo.height,Height of the solo counterpart
+N,Height,"Height of the individual (focal or solo, depending on column F)"
+O,Nearest.neighbour.sp,Species ID of the nearest neighbour. NA if solo
+P,Nearest.neighbour.height,Nearest neighbour height (measured if the neighbour was one of the 8 focal species)
+Q,Soilmoisture.11.or.12.Aug.1.hicomp,First soil moisture measurement (of 3) in the high comp section of the plot in early August. Scale of measurement of soil moisture readings: within high comp or solo areas of each plot
+R,Soilmoisture.11.or.12.Aug.2.hicomp,Second soil moisture measurement (of 3) in the high comp section of the plot in early August. Scale of measurement of soil moisture readings: within high comp or solo areas of each plot
+S,Soilmoisture.11.or.12.Aug.3.hicomp,Third soil moisture measurement (of 3) in the high comp section of the plot in early August. Scale of measurement of soil moisture readings: within high comp or solo areas of each plot
+T,Mean.soilmoisture.11.or.12.Aug.hicomp,Mean of the 3 measurements of soil mositure in high comp subsection of the plot in early Aug
+U,Mean.SM.earlyAug,Mean of the 3 measurements of soil moisture in either the high comp or solo subsection of the plot (same values as cols T and Y)
+V,Solo.soilmoisture.Aug11or12.1,"Same as cols Q:S, only in the solo subsection of that plot"
+W,Solo.soilmoisture.Aug11or12.2,"Same as cols Q:S, only in the solo subsection of that plot"
+X,Solo.soilmoisture.Aug11or12.3,"Same as cols Q:S, only in the solo subsection of that plot"
+Y,Mean.solo.soilmoisture,Mean of the 3 soil moisture measurements cols V:X in early Aug
+Z,Soilmoisture.22.or.23.Aug.1.hicomp,"Same as cols Q:S, only in late Aug"
+AA,Soilmoisture.22.or.23.Aug.2.hicomp,"Same as cols Q:S, only late Aug"
+AB,Soilmoisture.22.or.23.Aug.3.hicomp,Same as cols Q:S
+AC,Mean.soilmoisture.22.or.23.Aug.hicomp,Mean of soil moisture readings in late Aug in high competition plot
+AD,Solo.soilmoisture.22or23.Aug.1,Same as cols V:X only in late Aug
+AE,Solo.soilmoisture.22or23Aug.2,Same as cols V:X only in late Aug
+AF,Solo.soilmoisture.22or23Aug.3,Same as cols V:X only in late Aug
+AG,Mean.solo.soilmoisture.22or23.Aug,Mean of 3 soil moisture readings in the solo subsection of the plot in late August
+AH ,Mean.SM.lateAug,"Mean soil moisture in late Aug, same as col AC or AG"
+AI,Soilmoisture.3Sep.hicomp.1,"Same as cols Q:S, only in September"
+AJ,Soilmoisture.3Sep.hicomp.2,"Same as cols Q:S, only in September"
+AK,Soilmoisture.3Sep.hicomp.3,"Same as cols Q:S, only in September"
+AL,Mean.soilmoisture.3Sep.hicomp,Mean of 3 soil moisture readings in the highcomp subsection of the plot in September
+AM,Solo.soilmoisture.3Sep.1,Same as cols V:X only September
+AN,Solo.soilmoisture.3Sep.2,Same as cols V:X only September
+AO,Solo.soilmoisture.3Sep.3,Same as cols V:X only September
+AP,Mean.solo.soilmoisture.3Sep,Mean of 3 soil moisture readings in solo subsection of the plot in September
+AQ,Mean.SM.Sep,"Mean of the 3 readings of soil moisutre in September, same as col AL or AP depending on whether it was solo or highcomp subsection of the plot"
+AR,Delta.MeanSM.AugSep,Col AQ - Col  U (how much did the mean soil moisture decline in that plot subsection between early Aug timepoint and Sept timepoint?)
+AS,Bare,Percent cover of bare ground in the high competition subsection only
+AT,Moss,Percent cover of moss in the high competition subsection only
+AU,Crust,Percent cover of biotic crust in the high competition subsection only
+AV,CWD,Percent cover of coarse woody debris in the high competition subsection only
+AW,Rock,Percent cover of rock in the high competition subsection only
+AX,Near.under.log,Binary: was the plot near (<0.3m away from) or underneath a log/fallen branch?
+AY,Jam.litter,Percent cover of jam leaf litter in the high competition subsection only
+AZ,Euc.litter,Percent cover of York Gum leaf litter in the high competition subsection only
+BA,Notes,Notes
+BB,Colwell.P,"Colwell phosphorus (units: mg/kg), measured at the plot scale"
+BC,Canopy.cover.final,"Overhead woody canopy cover (percent), measured at the plot scale"
+BD,Exclude.from.analysis,Binary. Indicates that species was misidentified or otherwise not fit to use in analysis
+BE,Num.fl.total,How many flowers the plant produced 
+BF,Num.fl.seeding.total,How many  flowers on the individual produced seeds
+BG,Seedcount.extrap.integer,"Integer of seed counts, extrapolated where not all seeding flwoers were collected and mean number of seeds per collected flower was used to extrapolate total seed count"
+BH ,Mean.solo.seedcount.extrap.integer.block,Mean seed count of the solos of a given species within a given block
+BI,Delta.seedcount.meansolospeciesblock,Col BH - Col BG. A measurement of how much the seed output of an individual deviated from the mean of the solos of that speices in its block.
+BJ,Solo.seedcount.extrap.integer,"Same as col BG, NA where individual was in high competition subsection of plot"
+BK,Delta.seedcount.highcomp.solo.pair,"Within a plot, how much did the seed production of high competition individual deviate from its solo counterpart within that plot?"

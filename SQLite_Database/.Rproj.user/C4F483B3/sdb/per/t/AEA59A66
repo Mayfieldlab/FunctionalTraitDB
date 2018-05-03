@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Interface SQLlite3 and R \n# load library\nlibrary(RSQLite)\nlibrary(DBI)\nlibrary(sqldf)\n\nhome_dir<-getwd()\nsetwd(\"test_trait_database\")\n# connect to the sqlite file\ncon <- dbConnect(RSQLite::SQLite(), dbname=\"test_trait.db\")\n\n# get a list of all tables\nalltables <- dbListTables(con)\n\n# get the field season as a data.frame\np1 <- dbGetQuery( con,'SELECT * FROM field_season' )\n\n# count the field seasons in the SQLite table\np2 <- dbGetQuery( con,'SELECT COUNT(*) FROM field_season' )\n\n# find years of the field seasons\np3 <- dbGetQuery(con, \"SELECT year FROM field_season\")\n\n#Clear the results of the last query\ndbClearResult(p3)\n\n#Select from the field season table just the years 2016\np4 <- dbGetQuery(con, \"SELECT * from field_season WHERE year LIKE '2016'\")\n",
+    "created" : 1525304934567.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1632351564",
+    "id" : "AEA59A66",
+    "lastKnownWriteTime" : 1525306101,
+    "last_content_update" : 1525306101039,
+    "path" : "/data/Dropbox/Mayfield Lab/FunctionalTraitDatabase/SQLite_Database/example.query.code.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,16 @@
+Column:,Explanation:
+neighbour.id,ID as recorded in field notebooks and in entered data 
+Correct.species.name,"Where species was incorrectly ID'ed in preceding column, the species name has been corrected.  Where the species was not identified at all in the preceding clumn,  ""NA"" has been substituted to allow for exclusion of these species from analysis "
+Origin,Native or Exotic
+Mean.maxheight.Perenjori.2011.mm; height to tallest leaf,"Mean of the tallest individuals in survey quadrats  at Perenjori in 2011; height to tallest leaf. If ""NA"", not present in survey quadrats in 2011."
+Mean.maxheight.Bendering.2011.mm,"Mean of the tallest individuals in survey quadrats at Bendering in 2011; height to tallest leaf. If ""NA"", not present in survey quadrats in 2011."
+Invader.strategy,"""Coexister.or.other"" OR ""Exploiter"", as determined by Lai et al. (2015) Ecol Let and/or by >50% of its occurrences at edge sites (if yes, then ""Exploiter"") in 2011 surveys. Native species have an ""NA"""
+Invader.strategy.quantified,Equal to 1 if this invader strategy designation is based on actual analysis (i.e. it was a focal species in Lai et al. 2015 Ecol Lett paper)
+Phenology.Perenjori.2011,"Compared to the  most common phenological state at the remnant during surveys (Budding-Flowering or Flowering at Perenjori in late August), was this species early season, mid season, or late season?"
+Phenology.Bendering.2011,"Compared to the  most common phenological state at the remnant during surveys (Flowering-Seeding or Seeding at Bendering in early October), was this species early season, mid season, or late season?"
+Phenology.averaged.2011,Phenology status combined between Perenjori and Bendering individuals in case we want to lump them
+Mean.canopy.shape.Perenjori,Mean canopy shape (see Kraft et al. 2015 for method) from a subset of specimens collected by JD & CW in 2011 at Perenjori
+Canopy.shape.sample.size.Perenjori,"Number of individuals measured to attain mean canopy shape value. Target was 10, but not always possible due to deterioration, <10 individuals pressed, only leaves collected, etc"
+Mean.canopy.shape.Bendering,Mean canopy shape (see Kraft et al. 2015 for method) from a subset of specimens collected by JD & CW in 2011 at Bendering
+Canopy.shape.sample.size.Bendering,"Number of individuals measured to attain mean canopy shape value. Target was 10, but not always possible due to deterioration, <10 individuals pressed, only leaves collected, etc"
+Life.form,"Annual forb or annual grass, or ""NA"" where species was not ID'ed far down enough to say for sure whether annual or perennial"

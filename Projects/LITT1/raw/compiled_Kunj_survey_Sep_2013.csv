@@ -1,0 +1,24 @@
+Plot,Block,Percent cat rmng,Percent an rmng,Notes
+10.S.2.C,10,1,0.67,1 anion strip missing
+10.S.4.C,10,0.495,0.67,1 anion strip missing
+16.S.5.C,16,0.67,1,1 cation strip missing
+16.N.5.L,16,1,0.67,1 anion strip missing
+16.N.2.L,16,1,0.67,1 anion strip missing
+15.S.5.L,15,0.67,,1 cation strip missing
+15.N.2.L,15,0.67,1,1 cation strip missing
+11.S.2.C,11,1,0.67,1 anion strip missing
+11.N.5.L,11,1,0.495,1 anion strip missing
+13.S.2.C,13,1,0.67,1 anion strip missing
+14.N.2.L,14,0.89,1,
+16.N.1.L,16,1,1,
+11.S.4.C,11,1,1,
+11.S.5.C,11,1,1,
+16.N.4.L,16,0.825,1,
+16.N.5.C,16,1,0.67,
+13.S.2.L,13,1,0.67,
+13.N.3.L,13,0.67,1,
+14.N.3.C,14,1,0.67,
+11.N.2.C,11,1,0.67,
+14.N.4.L,14,1,0.825,
+11.S.1.C,11,1,0.67,
+16.S.3.L,16,1,0.8911,

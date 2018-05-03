@@ -1,0 +1,48 @@
+Metadata for "quadrat_scale_data_June_2017.csv"
+This is a quadrat-scale dataset including ALL quadrats surveyed in 2010 (dry year) and 2011 (wet year).
+
+year = the survey year, either 2010 or 2011
+remnant = name of a discrete woodland patch within the agricultural matrix
+site = a 15 x 15 m herb-dominated area within a remnant (from 2 to 6 sites per remnant)
+quadrat = the number of each 30 x 30 cm quadrat within which plants were surveyed (15 randomly located quadrats per site)
+yrsq = concatenation of "year", "remnant", "site" and "quadrat" (provides unique quadrat identifier)"
+
+site.lat = the latitude of the southwestern corner of the site
+site.long = the longitude of the southwestern corner of the site
+quadrat.x = the x coordinate in metres for the quadrat location relative to the southwestern corner of the site
+quadrat.y = the y coordinate in metres for the quadrat location relative to the southwestern corner of the site
+
+edge = indicator variable for edge sites
+woody.cover = percentage cover of woody trees and shrubs above each quadrat
+sclero.litter = binary variable indicating the presence of sclerophyll leaf litter (from trees and shrubs) over all or most of the quadrat
+cwd = binary variable indicating the presence of course woody debris (a log or fallen branch)
+grass.litter = binary variable indicating the presence of exotic grass litter (residual leaf litter) over all or most of the quadrat
+plant.avail.n = plant-available N (ammonium + nitrate) for each quadrat (mg/Kg)
+plant.avail.p = plant-available P (Colwell method) for each quadrat (mg/Kg)
+plant.avail.k = plant-available K (Colwell method) for each quadrat (mg/Kg)
+pH = soil pH (H2O)
+map = mean annual precipitation (mm), extracted from SILO
+gs.tmin = mean minimum temperature (deg C) during the growing season
+gs.tmax = mean maximum temperature (deg C) during the growing season
+
+
+Metadata for "species_in_quadrat_scale_June_2017.csv"
+This LARGE dataset includes one row for each species recorded in each quadrat. The remnant, site and quadrat identifiers correspond exactly to those in "quadrat_scale_data_June_2017.csv".
+
+year = the survey year, either 2010 or 2011
+remnant = name of a discrete woodland patch within the agricultural matrix
+site = ID number of each 15 x 15 m herb-dominated area within a remnant (from 2 to 6 sites per remnant)
+quadrat = ID number of each 30 x 30 cm quadrat within which plants were surveyed (15 randomly located quadrats per site)
+yrsq = concatenation of "year", "remnant", "site" and "quadrat" (provides unique quadrat identifier)"
+
+species = entire species name (with "." instead of spaces, includes some unknowns but these are rare in frequency and abundance)
+count = the number of individuals of the species recorded in the quadrat
+life.form = life form of the species (e.g. annual forb, annual graminoid etc.)
+exotic = binary variable indicating that the species is exotic in Australia
+measured.sla = specific leaf area (SLA, mm2/mg) measured on a specimen collected in the quadrat
+mean.seed.mass = species-level mean seed mass
+measured.height = vegetative height (mm) measured on a specimen collected in the quadrat (same specimen as SLA)
+measured.width = vegetative width (mm) measured on a specimen collected in the quadrat (same specimen as SLA, only available for "core" sites in 2011)
+leaf.area.for.sla = area of leaf (mm2) 
+leaf.complete = indicates if the leaf was complete and can be used for leaf area (only reliable for "core" sites in 2011)
+leaf.dry.mass.for.sla = leaf dry mass (mg)
