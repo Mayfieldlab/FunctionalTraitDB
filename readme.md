@@ -1,12 +1,10 @@
 ![](FinalSchema.png)
 
-<center>
 # **Mayfield Lab Functional Trait Database**
 #### *Trace Martyn, Maylon Bimler, Abigail Pastore, Lachalan Charles, Isaac Towers, Cath Bowler*
 #### *Mayfield Plant Ecology Lab PI: Prof. Margie Mayfield*
 #### *University of Queensland*
 ##### *Initial commit: May 8, 2018*
-</center>
 
 ***
 
