@@ -1,12 +1,30 @@
 ![](FinalSchema.png)
 
 # **Mayfield Lab Functional Trait Database**
-#### *Trace Martyn, Maylon Bimler, Abigail Pastore, Lachalan Charles, Isaac Towers, Cath Bowler*
+#### *Maylon Bimler, Cath Bowler, Lachalan Charles, Trace Martyn, Abigail Pastore, Isaac Towers*
 #### *Mayfield Plant Ecology Lab PI: Prof. Margie Mayfield*
 #### *University of Queensland*
 ##### *Initial commit: May 8, 2018*
 
 ***
+
+## Introduction
+
+This is a database that combines all completed datsets from projects that have individual-level trait data available. We have in this repository the data and code to create the SQLite database as well as example queries. 
+
+This project was initialized with M. Bimler, C. Bowler, C. Elmer, and T. Martyn in May 2017 but was dropped during the field season and post. It has since been picked up by the above authors in May 2018. 
+
+### Timeline for completion
+
+Below is the *tentative* timeline for completion of the database (pre-2018 field season data aquistion).
+
+* May 11 = T. Martyn send Mal current protocol.
+* May 16 = M. Bimler and T. Martyn present current protocol to the group.
+* May 16 = All receive assignments for projects.
+* Jun 6 = All data cleaning is complete.
+* Jun 6 = Assign tasks for data compling, DB assembly, DB check, QAQC, and example query making.
+* Jun 29 = Functional trait datdabase is up-to-date to the best of everyone's knowledge
+* Recurring = Update the protocol
 
 ## Adding new projects
 
@@ -30,8 +48,8 @@ The files must be names exactly as listed below (in all lowercase) and have the 
 	+ project_id = **FKey** to *'projects'* table
 	+ year = a 4-integer year identifying the year of the field season *(e.g. 2018)*
 	+ crew = a text string listing the field crew with names separated by underscores *(e.g. JohnDwyer_ClaireWainwright)*
-	+ fs_min_temp_C = the minimum temperature in degrees C for the field season
-	+ fs_max_temp_C = the maximum temperature in degrees C for the field season 
+	+ fs_min_temp_C = the minimum temperature in ^o^C for the field season
+	+ fs_max_temp_C = the maximum temperature in ^o^C for the field season 
 	+ fs_mean_precip_mm = the mean precipitaiton over the field season period.
 
 * site.csv
@@ -106,8 +124,8 @@ Below is a list of potential tables for various individual-level traits.
 Below is an example table with column headings listed.
 
 * seed_mass.csv
-	+ seed_mass_id = unique integer for trait entry
-	+ individual_id = FKey to 'individual' table
+	+ seed_mass_id = unique integer for trait entry **(PKey)**
+	+ individual_id = **FKey** to *'individual'* table
 	+ seedmass_mg = numeric value of the trait
 	+ date_collected = date sample was collected
 
