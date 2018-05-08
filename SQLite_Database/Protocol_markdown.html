@@ -244,15 +244,56 @@ $(document).ready(function () {
 <ul>
 <li>seed_mass.csv
 <ul>
-<li>seed_mass_id = unique integer for trait entry</li>
-<li>individual_id = FKey to ‘individual’ table</li>
+<li>seed_mass_id = unique integer for trait entry <strong>(PKey)</strong></li>
+<li>individual_id = <strong>FKey</strong> to <em>‘individual’</em> table</li>
 <li>seedmass_mg = numeric value of the trait</li>
 <li>date_collected = date sample was collected</li>
 </ul></li>
 </ul>
+</div>
+</div>
+</div>
+<div id="setup-of-the-species-tables-for-the-database" class="section level2">
+<h2>Setup of the species tables for the database</h2>
+<p>Below is the setup for the species portion of the functional trait database. This part of the database will be called through the individual plant id.</p>
+<ul>
+<li>species.csv
+<ul>
+<li>species_id = unique integer for species <strong>(PKey)</strong></li>
+<li>species = the specific epithet of the plant scientific name</li>
+<li>family_id = <strong>FKey</strong> to <em>‘family’</em> table</li>
+<li>genus_id = <strong>FKey</strong> to <em>‘genus’</em> table</li>
+<li>invasive_id = <strong>FKey</strong> to <em>‘invasive’</em> table</li>
+<li>habit_id = <strong>FKey</strong> to <em>‘habit’</em> table</li>
+<li>life_form = <strong>FKey</strong> tp <em>‘life_form’</em> table</li>
+</ul></li>
+<li>family.csv
+<ul>
+<li>family_id = unique integer for plant family <strong>(PKey)</strong></li>
+<li>family = text string for the plant family name</li>
+</ul></li>
+<li>genus.csv
+<ul>
+<li>genus_id = unique integer for plant genus <strong>(PKey)</strong></li>
+<li>genus = text string for the plant genus name</li>
+</ul></li>
+<li>invasive.csv
+<ul>
+<li>invasive_id = unique integer for native/invasive statue (either 1 or 2) <strong>(PKey)</strong></li>
+<li>invasive = text string for the status (native and exotic, respectively)</li>
+</ul></li>
+<li>habit.csv
+<ul>
+<li>habit_id = unique integer for habit <strong>(PKey)</strong></li>
+<li>habit = text string to describe the habit <em>(e.g. grass or forb)</em></li>
+</ul></li>
+<li>life_form.csv
+<ul>
+<li>life_form_id = unique integer for the life form</li>
+<li>life_form = text string labelling life form <em>(e.g. annual or perennial)</em></li>
+</ul></li>
+</ul>
 <hr />
-</div>
-</div>
 <div id="potential-future-additions" class="section level3">
 <h3>Potential future additions</h3>
 <ul>

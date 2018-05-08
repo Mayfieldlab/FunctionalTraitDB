@@ -1,0 +1,12 @@
+###TO DO list for the Functional Trait DB
+## TEM 08.05.2018
+
+- Write data entry protocol (Mal and Trace)
+- Set up data structure (Mal and Trace and ??)
+- Identity projects: old, new, & future (Mal, Trace, Abigail, Lachlan, Isaac, Cath)
+- Collect data and clean so tables can be easily inserted into database (Mal, Trace, Abigail, Lachlan, Isaac, Cath)
+- Combine seperate files in each project into one csv and insert as table into DB (???) NOTE Chrissy wrote some code that might help - see SQLite_Databse>Construction>GetProjects.R
+- Make sure that all keys are properly identified
+- Create example queries
+- Identify future additions to the database
+

@@ -115,11 +115,44 @@ Below is a list of potential tables for various individual-level traits.
 Below is an example table with column headings listed.
 
 * seed_mass.csv
-	+ seed_mass_id = unique integer for trait entry
-	+ individual_id = FKey to 'individual' table
+	+ seed_mass_id = unique integer for trait entry **(PKey)**
+	+ individual_id = **FKey** to *'individual'* table
 	+ seedmass_mg = numeric value of the trait
 	+ date_collected = date sample was collected
 
+## Setup of the species tables for the database
+
+Below is the setup for the species portion of the functional trait database. This part of the database will be called through the individual plant id.
+
+* species.csv
+  	+ species_id = unique integer for species **(PKey)**
+  	+ species = the specific epithet of the plant scientific name
+  	+ family_id = **FKey** to *'family'* table
+  	+ genus_id = **FKey** to *'genus'* table
+  	+ invasive_id = **FKey** to *'invasive'* table
+  	+ habit_id = **FKey** to *'habit'* table
+  	+ life_form = **FKey** tp *'life_form'* table
+ 
+* family.csv
+  	+ family_id = unique integer for plant family **(PKey)**
+  	+ family = text string for the plant family name
+
+* genus.csv
+ 	  + genus_id = unique integer for plant genus **(PKey)**
+ 	  + genus = text string for the plant genus name
+
+* invasive.csv
+    + invasive_id = unique integer for native/invasive statue (either 1 or 2) **(PKey)**
+    + invasive = text string for the status (native and exotic, respectively)
+  
+* habit.csv
+    + habit_id = unique integer for habit **(PKey)**
+    + habit = text string to describe the habit *(e.g. grass or forb)*
+
+* life_form.csv
+    + life_form_id = unique integer for the life form 
+    + life_form = text string labelling life form *(e.g. annual or perennial)*
+    
 ***
 ### Potential future additions
 * Include species-level trait values
