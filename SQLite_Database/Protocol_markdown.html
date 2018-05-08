@@ -165,8 +165,8 @@ $(document).ready(function () {
 <li>units = units of the above estimation of site <em>(e.g. km2)</em></li>
 <li>lat = latitude value of site</li>
 <li>long = longitude value of site</li>
-<li>max_temp_C = long term (30-yr) mean annual maximum temperature in oC</li>
-<li>min_temp_C = long term (30-yr) mean annual minimum temperature in oC</li>
+<li>max_temp_C = long term (30-yr) mean annual maximum temperature in <sup>o</sup>C</li>
+<li>min_temp_C = long term (30-yr) mean annual minimum temperature in <sup>o</sup>C</li>
 <li>ann_precip_mm = long term (30-yr) mean annual precipitation in mm</li>
 </ul></li>
 <li>treatment.csv
@@ -185,6 +185,8 @@ $(document).ready(function () {
 <li>field_season_id = <strong>FKey</strong> to <em>‘field_season’</em> table</li>
 <li>site_id = <strong>FKey</strong> to <em>‘site’</em> table</li>
 <li>block = integer with block number <em>(if no block present fill with NULL)</em></li>
+<li>plot_size_cm2 = numeric plot size in cm<sup>2</sup></li>
+<li>plot_shape = text string noting shape <em>(e.g. circle or square)</em></li>
 <li>treatment_id = FKey to ‘treatment’ table</li>
 <li>lat = latitude value for the plot <em>(if not present fill with NULL)</em></li>
 <li>long = longitude value for the plot <em>(if not present fill with NULL)</em></li>

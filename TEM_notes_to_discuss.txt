@@ -6,3 +6,4 @@ NOTES to discuss
 	Should add a start and end date to the table? (approximate when don't know but list if do know)
 - Do we care about the date of collection for trait?
 - what are the units we want to standardize to for the traits?
+- want plot size and shape in the plot table?

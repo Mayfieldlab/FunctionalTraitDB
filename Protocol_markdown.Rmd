@@ -50,8 +50,8 @@ The files must be names exactly as listed below (in all lowercase) and have the 
 	+ units = units of the above estimation of site *(e.g. km2)*
 	+ lat = latitude value of site
 	+ long = longitude value of site
-	+ max_temp_C = long term (30-yr) mean annual maximum temperature in oC
-	+ min_temp_C = long term (30-yr) mean annual minimum temperature in oC
+	+ max_temp_C = long term (30-yr) mean annual maximum temperature in ^o^C
+	+ min_temp_C = long term (30-yr) mean annual minimum temperature in ^o^C
 	+ ann_precip_mm = long term (30-yr) mean annual precipitation in mm
 
 * treatment.csv
@@ -66,6 +66,8 @@ The files must be names exactly as listed below (in all lowercase) and have the 
 	+ field_season_id = **FKey** to *'field_season'* table
 	+ site_id = **FKey** to *'site'* table
 	+ block = integer with block number *(if no block present fill with NULL)*
+	+ plot_size_cm2 = numeric plot size in cm^2^
+	+ plot_shape = text string noting shape *(e.g. circle or square)*
 	+ treatment_id = FKey to 'treatment' table
 	+ lat = latitude value for the plot *(if not present fill with NULL)*
 	+ long = longitude value for the plot *(if not present fill with NULL)*
