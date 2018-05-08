@@ -1,0 +1,8 @@
+NOTES to discuss
+- do we want lat/longs or UTMs for the site and plot position data?
+- Field season temperature (mean field season max and min or absolute?). 
+	Provide url for people to extract such data. 
+- Field season precip will change with length and season of field season. 
+	Should add a start and end date to the table? (approximate when don't know but list if do know)
+- Do we care about the date of collection for trait?
+- what are the units we want to standardize to for the traits?

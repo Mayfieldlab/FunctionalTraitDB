@@ -64,7 +64,7 @@ Trace: BEND1, HOIR1, POLL1&2, SURV1, TIME1
 	BEND1: Does not have individual-level trait data - maybe future endeavor to include just composition notes. **for only 2104** all blue tables except neighborhood (see schema) completed on 15/06/2017. 
 	TIME1: trait table and all blue tables except neighborhood (see schema) completed on 15/06/2017. NOTE!! Need to try and standardize trait names to stay consistent across projects.
 	POLL1: data will be collected during 2017 season (no previous data)
-	POLL2: emailed Loy about his honours data - will  be able to send to us late August (after field season)
+	POLL2: emailed Loy about his honours data - will  be able to send to us late August (after field season). Does not have individual plant data.
 	SURV1: data has been added the the folder and trait table and all blue tables except neighborhood (see schema) completed on 22/06/2017
 
 Chrissy: EUCD1, GERM1, WARM1, BROM1, + Species list,

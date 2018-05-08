@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1525742550079.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1632351564",
+    "id" : "FDD606D7",
+    "lastKnownWriteTime" : 1525306101,
+    "last_content_update" : 1525742701831,
+    "path" : "D:/Dropbox/Mayfield Lab/FunctionalTraitDatabase/SQLite_Database/example.query.code.R",
+    "project_path" : "example.query.code.R",
+    "properties" : {
+        "cursorPosition" : "27,74",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

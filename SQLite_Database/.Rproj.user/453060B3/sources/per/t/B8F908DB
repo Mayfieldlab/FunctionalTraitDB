@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1525742724804.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3227616589",
+    "id" : "B8F908DB",
+    "lastKnownWriteTime" : 1525311419,
+    "last_content_update" : 1525311419,
+    "path" : "D:/Dropbox/Mayfield Lab/FunctionalTraitDatabase/SQLite_Database/test.making.species.db.R",
+    "project_path" : "test.making.species.db.R",
+    "properties" : {
+        "cursorPosition" : "33,17",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
