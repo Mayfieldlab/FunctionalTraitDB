@@ -1,21 +1,14 @@
----
-title: "Protocol for Functional Trait Database"
-author: "Trace Martyn, Maylon Bimler, Abigail Pastore, Lachalan Charles, Isaac Towers, Cath Bowler"
-address: "University of Queensland, Mayfield Plant Ecology Lab"
-version: "Version 1"
-date: 8 May 2018
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ![](FinalSchema.png)
 
-***
+<center>
+# **Mayfield Lab Functional Trait Database**
+#### *Trace Martyn, Maylon Bimler, Abigail Pastore, Lachalan Charles, Isaac Towers, Cath Bowler*
+#### *Mayfield Plant Ecology Lab PI: Prof. Margie Mayfield*
+#### *University of Queensland*
+##### *Initial commit: May 8, 2018*
+</center>
 
-This is a protocol for how to add new proejects to the Mayfield Plant Functional Trait Database in SQLite.
+***
 
 ## Adding new projects
 
