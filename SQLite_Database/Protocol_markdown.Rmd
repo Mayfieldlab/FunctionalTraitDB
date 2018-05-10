@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ***
 
-This is a protocol for how to add new proejects to the Mayfield Plant Functional Trait Database in SQLite.
+This is a protocol for how to add new projects to the Mayfield Plant Functional Trait Database in SQLite.
 
 ## Adding new projects
 
