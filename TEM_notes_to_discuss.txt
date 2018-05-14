@@ -7,3 +7,12 @@ NOTES to discuss
 - Do we care about the date of collection for trait?
 - what are the units we want to standardize to for the traits?
 - want plot size and shape in the plot table?
+- create a template R file with example code for future researchers to use to create the required clean csvs
+- add links about SQLite and Github to the protocol
+- list what the dimensions of the csv files should be (e.g. projects.csv should be a 1X4 csv without header)
+- create a pdf of all example csv file and what they should look like
+- make clear in protocol what are the column headings
+- for individual_id = projectcode_indiv#?
+- make example queries
+- make example plug & play to insert new code smoothly into the database
+- make code to smoothly match species ID from BD to new data
