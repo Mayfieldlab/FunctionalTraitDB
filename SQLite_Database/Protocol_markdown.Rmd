@@ -19,9 +19,9 @@ This is a protocol for how to add new projects to the Mayfield Plant Functional 
 
 ## Adding new projects
 
-Assign a new project a 4-letter code and sequential number identifier. For example: Watering project = **WATR1**. If another watering project is added later ten that proejct will be **WATR2**.
+Assign a new project a 4-letter code and sequential number identifier. For example: Watering project = **WATR1**. If another watering project is added later then that project will be **WATR2**.
 
-Next make a folder for that project labeled with the unique ID *(e.g. **WATR1**)*. Within that folder, place 2 sub-folder *'raw'* and *'clean'* (both names should be lowercase). Within the *'raw'* folder, you should place all raw data files relevent to the project	as well as a *'readme.txt'* that describes where those files were originally located	in the MayfieldLab Dropbox and what data are in each. Within the *'clean'* folder, you should have the R code file used to create the cleaned data csv's as well as multiple csvs for that project structured as the following.
+Next make a folder for that project labeled with the unique ID *(e.g. **WATR1**)*. Within that folder, place 2 sub-folders *'raw'* and *'clean'* (both names should be lowercase). Within the *'raw'* folder, you should place all raw data files relevant to the project as well as a *'readme.txt'* that describes where those files were originally located	in the MayfieldLab Dropbox and what data are in each. Within the *'clean'* folder, you should have the R code file used to create the cleaned data csv's as well as multiple csvs for that project structured as the following.
 
 ### List of CSVs for each project
 
@@ -32,7 +32,7 @@ The files must be names exactly as listed below (in all lowercase) and have the 
 	+ project = a text string giving a title to the project *(e.g. Survey of 12 sites along a climatic gradient)*
 	+ researcher = a text string noting the head PI/researcher for the proejct
 	+ email = a text string noting the current email address of head PI
-	+ study_sites = a text string listing the study sites of the project
+	+ study_sites = a text string listing the study sites of the project, seperated by an underscore *(e.g. Bendering_Kunjin_Perenjori)*
 
 * field_season.csv
 	+ field_season_id = a unique integer given to the field season **(PKey)**
@@ -41,7 +41,10 @@ The files must be names exactly as listed below (in all lowercase) and have the 
 	+ crew = a text string listing the field crew with names separated by underscores *(e.g. JohnDwyer_ClaireWainwright)*
 	+ fs_min_temp_C = the minimum temperature in degrees C for the field season
 	+ fs_max_temp_C = the maximum temperature in degrees C for the field season 
-	+ fs_mean_precip_mm = the mean precipitaiton over the field season period.
+	+ fs_mean_precip_mm = the mean precipitation over the field season period.
+
+**NOTE:** where are we getting these 3 above measures from - the field, BOM, another source ? Regardless, it should be standardised. 
+Also, when a field season covers several sites, are we just taking the min and max temps across all sites ? 
 
 * site.csv
 	+ site_id = unique integer for site **(PKey)**
@@ -54,9 +57,13 @@ The files must be names exactly as listed below (in all lowercase) and have the 
 	+ min_temp_C = long term (30-yr) mean annual minimum temperature in ^o^C
 	+ ann_precip_mm = long term (30-yr) mean annual precipitation in mm
 
+**NOTE:** Same as above regarding the measures of temperature and precipitation.
+
 * treatment.csv
 	+ treatment_id = unique integer for treatment **(PKey)**
 	+ treatment = string text describing teatment
+
+**NOTE:** How in depth should the treatment description be ? We should give an example. We also need to figure out how we should deal with multiple treatments at some point.
 
 * trait_summary.csv
 	+ field_season_id = **FKey** to *'field_season'* table
@@ -79,7 +86,7 @@ The files must be names exactly as listed below (in all lowercase) and have the 
 
 ### List of potential environmental CSVs for plots
 
-Below is a list of potential tables for various plot-level enviornmental characterstics.
+Below is a list of potential tables for various plot-level environmental characteristics.
 
 * plant_avail_p.csv
 * plant_avail_n.csv
@@ -89,6 +96,8 @@ Below is a list of potential tables for various plot-level enviornmental charact
 * per_woody_debris.csv
 * per_litter.csv
 * per_bareground.csv
+
+**NOTE:** We need to make sure that all these measures are standardised across sites and projects.
 
 #### Example environmental table
 Below is an example table with column headings listed.
