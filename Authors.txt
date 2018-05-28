@@ -1,10 +1,9 @@
 ## These are the authors of this project
 
 - Trace Martyn
-<<<<<<< HEAD
 - Cath Bowler 
-=======
 - Isaac Towers
->>>>>>> c9c48162d541821c08d84754287d45da77223e27
+- Lachlan Charles
+- Maylon Bimler
+- Abigail Pastore
 
--Lachlan
