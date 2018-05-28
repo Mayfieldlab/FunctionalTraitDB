@@ -46,3 +46,11 @@ measured.width = vegetative width (mm) measured on a specimen collected in the q
 leaf.area.for.sla = area of leaf (mm2) 
 leaf.complete = indicates if the leaf was complete and can be used for leaf area (only reliable for "core" sites in 2011)
 leaf.dry.mass.for.sla = leaf dry mass (mg)
+
+Metadata for "litter_data_raw.csv" added by Isaac from John
+This dataset includes the percentage of litter cover in each quadrat as determined by inspection of photographs by JMD in 2017
+The quadrat and edge identifiers correspond directly to "quadrat_scale_data_June_2017.csv"
+
+yrsq = concatenation of "year", "remnant", "site" and "quadrat" (provides unique quadrat identifier)"
+edge = indicator variable for edge sites 0=interior 1=edge
+litter.cover = percentage of sclerophyll litter cover in each quadrat as determined by vertical photograph
