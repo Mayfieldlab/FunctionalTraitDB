@@ -26,6 +26,22 @@ Below is the *tentative* timeline for completion of the database (pre-2018 field
 * Jun 29 = Functional trait datdabase is up-to-date to the best of everyone's knowledge
 * Recurring = Update the protocol
 
+## Helpful tutorials
+In this project we use a number of different softwares.  It may be helpful to familiarize yourself with all or some of them when working with the database.  For you convenience, here are some tutorials!
+
+* What is a database?
+
+* Git and Github
+	+ A simple introduction is here:
+		+ https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV
+	+ More advanced info can be found here:
+		+ Video: https://www.youtube.com/watch?v=1ffBJ4sVUb4
+		+ Text: https://swcarpentry.github.io/git-novice/
+
+* SQL
+
+
+
 ## Adding new projects
 
 Assign a new project a 4-letter code and sequential number identifier. For example: Watering project = **WATR1**. If another watering project is added later ten that proejct will be **WATR2**.
