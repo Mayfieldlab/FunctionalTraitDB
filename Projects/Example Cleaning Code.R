@@ -18,7 +18,7 @@ rm(list=ls())
 
 ####Insert the name of the project folder
 
-project.folder<-"SURV1"
+project.name<-"SURV1"
 
 ####Insert the name, email of the principal investigator
 
@@ -31,7 +31,7 @@ project_id<-1
 
 
 ####set working directory to the designated project folder (no change required for this line)
-setwd(project.folder)
+setwd(project.name)
 
 
 #####    The following needs to be changed as per the requirements of the project     ####
@@ -154,69 +154,71 @@ plot<-data.frame(plot_id=plot.level.thinned$plot_id,field_season_id=plot.level.t
 
 #### to make the species-level dataframe
 
-#####make species dataframe
+#######################TBA#####################################
 
-species<-data.frame(species=unique(individual.level$species), species_id=seq(1:length(unique(individual.level$species))))
+####Species level dataframe and all higher-level csvs related to taxonomy are still to come
+####Species information will be extracted from a common SLQ database and the species IDS
+####matched up to the appropriate species in the spreadsheet. At the moment, we are currently
+####just using the species name as a placeholder
+
 
 ###individual data frame will have the same amount of observations of the raw individual-level data set
 ###just get the variables we will need
 
-
 individual.level.thinned<-data.frame(plot=individual.level$yrsq, species=individual.level$species)
+
+
+####merge the plot ID to the individual level, duplicates of plot ID because several individuals
+####occur within each plot
+
 individual.level.thinned<-merge(individual.level.thinned, plot.level.thinned[,c("plot","plot_id")], by="plot")
-individual.level.thinned<-merge(individual.level.thinned, species[,c("species","species_id")], by="species")
-individual.level.thinned$individual_id<-seq(1:length(individual.level.thinned))
+
+#####assign each individual an ID, but paste the name of the project to the front
+
+individual.level.thinned$individual_id<-paste(project.name, seq(1:length(individual.level.thinned[,1])), sep="_")
 
 
 ####make the individual dataframe
 individual<-data.frame(individual_id=individual.level.thinned$individual_id
                        ,plot_id=individual.level.thinned$plot_id
-                       ,species_id=individual.level.thinned$species_id)
+                       ,species=individual.level.thinned$species)
 
 
 ###########################
 ## make trait summary dataframe
 
+####include the field season ID variable to the individual level dataframe
 individual.level.trait<-merge(individual.level,field_season[,c("year","field_season_id")],"year")
 
-
-
-
-
-
-
-
-
-
-
-# add field_season_id from above
-raw.trait<-merge(raw.trait,field_season[,c("year","field_season_id")],"year")
-
-
 # split the large dataframe by field_season_id incase there are different traits for different seasons
-raw.trait.fs.1<-(raw.trait[which(raw.trait$field_season_id==1),])
-raw.trait.fs.2<-(raw.trait[which(raw.trait$field_season_id==2),])
+
+individual.level.trait.fs1<-(individual.level.trait[which(individual.level.trait$field_season_id==1),])
+individual.level.trait.fs2<-(individual.level.trait[which(individual.level.trait$field_season_id==2),])
 
 # visually insepect which column headers are traits
-head(raw.trait.fs.1)
-head(raw.trait.fs.2)
+head(individual.level.trait.fs1)
+head(individual.level.trait.fs2)
 
 # extract column names for trait values
-trait.col.names.1<-colnames(raw.trait.fs.1)[8:length(colnames(raw.trait.fs.1))]
-trait.col.names.2<-colnames(raw.trait.fs.2)[8:length(colnames(raw.trait.fs.1))]
+trait.col.names.1<-colnames(individual.level.trait.fs1)[9:length(colnames(individual.level.trait.fs1))]
+trait.col.names.2<-colnames(individual.level.trait.fs2)[9:length(colnames(individual.level.trait.fs2))]
 
 # make trait dataframe
 #list of traits = paste in column headers without the "." and then all merged into one string separted by "_"
 trait_summary<-data.frame(field_season_id=c(1,2),traits=c(paste(gsub("\\.","",trait.col.names.1),collapse = "_"),paste(gsub("\\.","",trait.col.names.2),collapse = "_")))
 
+###########################TO MAKE TRAIT CSVs###########################################
 
+######assign the individual ID
 
-####make individual-level dataframe
+individual.level.trait$individual_id<-individual.level.thinned$individual_id
 
-raw.trait.individual<-data.frame(plot=raw.trait$yrsq, species=raw.trait$species)
-raw.trait.individual<-merge(raw.trait.individual, plot[,c("plot_id","plot")], by="plot")
-raw.trait.individual<-merge(raw.trait.individual, species[,c("species_id","species")], by="species")
+SLA<-data.frame(SLA_id=seq(1:length(individual.level.trait$measured.sla))
+                ,individual_id=individual.level.trait$individual_id
+                ,value_units=paste(individual.level.trait$measured.sla,"mm^2/mg",sep="_")
+                ,date_collected=individual.level.trait$year)
 
-####start by removing extraneous variables
-
-
+height<-data.frame(height_id=seq(1:length(individual.level.trait$measured.height))
+                ,individual_id=individual.level.trait$individual_id
+                ,value_units=paste(individual.level.trait$measured.height,"mm",sep="_")
+                ,date_collected=individual.level.trait$year)
