@@ -222,3 +222,15 @@ height<-data.frame(height_id=seq(1:length(individual.level.trait$measured.height
                 ,individual_id=individual.level.trait$individual_id
                 ,value_units=paste(individual.level.trait$measured.height,"mm",sep="_")
                 ,date_collected=individual.level.trait$year)
+
+write.clean.csv<-function (x) write.csv(x, paste("clean/",as.character(bquote(field_season)),".csv", sep=""))
+
+write.clean.csv(projects)
+write.clean.csv(field_season)
+write.clean.csv(site)
+write.clean.csv(plot)
+write.clean.csv(individual)
+write.clean.csv(height)
+write.clean.csv(SLA)
+write.clean.csv(trait_summary)
+write.clean.csv(treatment)
