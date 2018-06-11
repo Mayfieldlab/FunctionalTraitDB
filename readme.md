@@ -64,9 +64,19 @@ The files must be names exactly as listed below (in all lowercase) and have the 
 	+ project_id = **FKey** to *'projects'* table
 	+ year = a 4-integer year identifying the year of the field season *(e.g. 2018)*
 	+ crew = a text string listing the field crew with names separated by underscores *(e.g. JohnDwyer_ClaireWainwright)*
-	+ fs_min_temp_C = the minimum temperature in ^o^C for the field season
+	+ fs_min_temp_C = the minimum temperature in ^o^C for the field season  
+		+ Go to http://www.bom.gov.au/climate/data/index.shtml  
+		+ Fill out the data query form
+			1. Select 'Temperature', 'Daily', 'Minimum temperature'
+			2. Enter site location.  Select the nearest open bureau station, Select year. 
+			3. Click 'Get Data'
+			4. Click "1 year of data" to download csv file
 	+ fs_max_temp_C = the maximum temperature in ^o^C for the field season 
+		+ Follow steps as above, change obsercations to "maximum temperature"
 	+ fs_mean_precip_mm = the mean precipitaiton over the field season period.
+		+ Follow steps as above, Select data about "Rainfall"
+
+		
 
 * site.csv
 	+ site_id = unique integer for site **(PKey)**
