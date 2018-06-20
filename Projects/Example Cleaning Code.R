@@ -14,6 +14,10 @@ rm(list=ls())
 #####In this code, I have used SURV1 which is John Dwyer's survey data from 2011.
 
 
+###function to write clean csvs automatically given the name of the dataframe
+write.clean.csv<-function(x) write.csv(x, paste("clean/",deparse(substitute(x)),".csv", sep=""))
+
+
                                #####PLUG-AND-PLAY REQUIRED INFO#########
 
 ####Insert the name of the project folder
@@ -152,6 +156,22 @@ plot.level.thinned$plot_id<-seq(1,length(plot.level.thinned$plot))
 plot<-data.frame(plot_id=plot.level.thinned$plot_id,field_season_id=plot.level.thinned$field_season_id,site_id=plot.level.thinned$site_id,block=plot.level.thinned$block,treatment_id=plot.level.thinned$treatment)
 
 
+######making environmental dataframes######
+
+plot.level$plot<-plot.level$yrsq
+plot.level<-merge(plot.level, data.frame(plot=plot.level.thinned$plot, plot_id=plot.level.thinned$plot_id), by="plot")
+
+woody.cover<-data.frame(woody_cover_id=seq(1:length(plot.level$woody.cover)),
+              plot_id=plot.level$plot_id,
+              woody_cover_percent=plot.level$woody.cover,
+              date_collected=plot.level$year)
+              
+
+
+
+
+
+
 #### to make the species-level dataframe
 
 #######################TBA#####################################
@@ -215,15 +235,18 @@ individual.level.trait$individual_id<-individual.level.thinned$individual_id
 
 SLA<-data.frame(SLA_id=seq(1:length(individual.level.trait$measured.sla))
                 ,individual_id=individual.level.trait$individual_id
-                ,value_units=paste(individual.level.trait$measured.sla,"mm^2/mg",sep="_")
+                ,SLA_mm2_mg=individual.level.trait$measured.sla
                 ,date_collected=individual.level.trait$year)
 
 height<-data.frame(height_id=seq(1:length(individual.level.trait$measured.height))
                 ,individual_id=individual.level.trait$individual_id
-                ,value_units=paste(individual.level.trait$measured.height,"mm",sep="_")
+                ,height_mm=individual.level.trait$measured.height
                 ,date_collected=individual.level.trait$year)
 
-write.clean.csv<-function (x) write.csv(x, paste("clean/",as.character(bquote(field_season)),".csv", sep=""))
+leaf_area<-data.frame(height_id=seq(1:length(individual.level.trait$leaf.area.for.sla))
+                      ,individual_id=individual.level.trait$individual_id
+                      ,height_mm=individual.level.trait$leaf.area.for.sla
+                      ,date_collected=individual.level.trait$year)
 
 write.clean.csv(projects)
 write.clean.csv(field_season)
@@ -232,5 +255,6 @@ write.clean.csv(plot)
 write.clean.csv(individual)
 write.clean.csv(height)
 write.clean.csv(SLA)
+write.clean.csv(leaf_area)
 write.clean.csv(trait_summary)
 write.clean.csv(treatment)
