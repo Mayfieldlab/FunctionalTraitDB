@@ -58,6 +58,7 @@ study_sites<-unique(plot.level$remnant)
 
 ####Create projects dataframe
 projects<-data.frame(project_id=project_id,
+                     project=project.name
                      researcher=researcher,
                      study_sites=paste(study_sites,collapse="_"))
 
