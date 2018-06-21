@@ -100,7 +100,9 @@ plot.level.thinned<-data.frame(year=plot.level$year,
                                site=plot.level$remnant,
                                block=plot.level$site,
                                plot=plot.level$yrsq,
-                               edge=plot.level$edge)
+                               edge=plot.level$edge,
+                               lat=plot.level$site.lat,
+                               long=plot.level$site.long)
 
 ###remove duplicated values if they are present
 plot.level.thinned<-plot.level.thinned[!duplicated(plot.level.thinned),]
@@ -127,7 +129,7 @@ plot.level.thinned$plot_id<-seq(1,length(plot.level.thinned$plot))
 
 
 ###make the plot data frame
-plot<-data.frame(plot_id=plot.level.thinned$plot_id,field_season_id=plot.level.thinned$field_season_id,site_id=plot.level.thinned$site_id,block=plot.level.thinned$block,treatment_id=plot.level.thinned$treatment)
+plot<-data.frame(plot_id=plot.level.thinned$plot_id,field_season_id=plot.level.thinned$field_season_id,site_id=plot.level.thinned$site_id,block=plot.level.thinned$block,treatment_id=plot.level.thinned$treatment, lat=plot.level.thinned$lat, long=plot.level.thinned$long)
 
 
 ######making environmental dataframes######
