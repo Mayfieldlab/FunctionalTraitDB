@@ -64,7 +64,7 @@ projects<-data.frame(project_id=project_id,
 ####list all years that the study occurred - if not available in raw dataframe then 
 ####fill in manual years as a vector
 
-#years<-c(2010,2011,...)
+#year<-c(2010,2011,...)
 year<-unique(plot.level$year)
 
 
