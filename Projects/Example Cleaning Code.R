@@ -43,16 +43,18 @@ setwd(project.name)
 
 ####To bring in a raw datasheet to be reformatted - all project folders include a "raw"
 ####file, thus the only thing that needs to be changed here is the name of the 
-####file (i.e. quadrat_scale_data_June_2017.csv) and the name of the object (i.e. raw.dataframe)
+####file (i.e. quadrat_scale_data_June_2017.csv) and the name of the object (i.e. plot.level)
 
 plot.level<-read.csv('raw/quadrat_scale_data_June_2017.csv')
 individual.level<-read.csv("raw/species_in_quadrat_scale_data_June_2017.csv")
 
 
 
-####Which study sites did this project occur at?
+####Which study sites did this project occur at? If this column does not exist in data then manually entry
+####using line below which is ###ed out
 
 study_sites<-unique(plot.level$remnant)
+##study_sites<-c("mystudysite1","mystudysite2")
 
 ####Create projects dataframe
 projects<-data.frame(project_id=project_id,
@@ -66,41 +68,14 @@ projects<-data.frame(project_id=project_id,
 year<-unique(plot.level$year)
 
 
-####min and max growing season temperature for each field season
-####set up empty vectors to recieve the information in the next step
-fs_min_temp_C<-as.vector(rep(NA, length(year)))
-fs_max_temp_C<-as.vector(rep(NA, length(year)))
-
-
-#####this study actually has multiple sites within a field season, so this is min and max
-#####temperature across all sites for a given field season
-for(i in 1:length(year)){
-  fs_min_temp_C[i]<-min(plot.level[plot.level$year==year[i],]$gs.tmin)
-  fs_max_temp_C[i]<-max(plot.level[plot.level$year==year[i],]$gs.tmax)
-  }
-
-
-
 ####Create field season dataframe 
 
 #Field_season_id appropriate if split over years, if only one field season then fill in "1" only
 #If crew does not change between years then fill in only one entry
 field_season<-data.frame(field_season_id=c(1,2),
                          project_id=project_id,
-                         year=year,crew=c("JohnDwyer","JohnDwyer_ClaireWainwright"),
-                         fs_min_temp_C=fs_min_temp_C,
-                         fs_max_temp_C=fs_max_temp_C)
-
-
-####min and max growing season temperature for each site, name of the dataframe and name 
-###of temperature variable e.g. gs.tmin needs to be changed to your own example
-min_temp_C<-as.vector(rep(NA, length(study_sites)))
-max_temp_C<-as.vector(rep(NA, length(study_sites)))
-
-for(i in 1:length(study_sites)){
-  min_temp_C[i]<-min(plot.level[plot.level$remnant==study_sites[i],]$gs.tmin)
-  max_temp_C[i]<-max(plot.level[plot.level$remnant==study_sites[i],]$gs.tmax)
-}
+                         year=year,crew=c("JohnDwyer","JohnDwyer_ClaireWainwright")
+                         )
 
 
 ####Create site dataframe
@@ -109,9 +84,8 @@ site<-data.frame(site_id=seq(1,length(study_sites)),
                  area=-9999,
                  units=-9999,
                  lat=-9999,
-                 long=-9999,
-                 max_temp_C=max_temp_C,
-                 min_temp_C=min_temp_C)
+                 long=-9999
+                 )
 
 ## treatment dataframe - each treatment is assigned an identifier and a name for the treatment
 treatment<-data.frame(treatment_id=c(1,2),
@@ -166,6 +140,8 @@ woody.cover<-data.frame(woody_cover_id=seq(1:length(plot.level$woody.cover)),
               woody_cover_percent=plot.level$woody.cover,
               date_collected=plot.level$year)
               
+
+##############repeat in the same way for all environment variables
 
 
 
@@ -258,3 +234,4 @@ write.clean.csv(SLA)
 write.clean.csv(leaf_area)
 write.clean.csv(trait_summary)
 write.clean.csv(treatment)
+write.clean.csv(woody.cover)
