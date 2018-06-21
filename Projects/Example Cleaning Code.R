@@ -181,6 +181,10 @@ individual<-data.frame(individual_id=individual.level.thinned$individual_id
                        ,plot_id=individual.level.thinned$plot_id
                        ,species=individual.level.thinned$species)
 
+####remember that above, species could be essentially whatever you like, we are still working on liking the 
+####the SLq database of species to the R code
+
+
 
 ###########################
 ## make trait summary dataframe
