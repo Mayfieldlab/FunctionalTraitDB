@@ -60,7 +60,8 @@ study_sites<-unique(plot.level$remnant)
 projects<-data.frame(project_id=project_id,
                      project=project.name,
                      researcher=researcher,
-                     study_sites=paste(study_sites,collapse="_"))
+                     study_sites=paste(study_sites,collapse="_"),
+                     notes=NA)
 
 ####list all years that the study occurred - if not available in raw dataframe then 
 ####fill in manual years as a vector
