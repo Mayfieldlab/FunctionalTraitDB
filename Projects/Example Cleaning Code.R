@@ -76,8 +76,8 @@ year<-unique(plot.level$year)
 #If crew does not change between years then fill in only one entry
 field_season<-data.frame(field_season_id=c(1,2),
                          project_id=project_id,
-                         year=year,crew=c("JohnDwyer","JohnDwyer_ClaireWainwright")
-                         )
+                         year=year,crew=c("JohnDwyer","JohnDwyer_ClaireWainwright"),
+                         notes=NA)
 
 
 ####Create site dataframe
@@ -86,8 +86,8 @@ site<-data.frame(site_id=seq(1,length(study_sites)),
                  area=-9999,
                  units=-9999,
                  lat=-9999,
-                 long=-9999
-                 )
+                 long=-9999,
+                 notes=NA)
 
 ## treatment dataframe - each treatment is assigned an identifier and a name for the treatment
 treatment<-data.frame(treatment_id=c(1,2),
@@ -104,7 +104,8 @@ plot.level.thinned<-data.frame(year=plot.level$year,
                                plot=plot.level$yrsq,
                                edge=plot.level$edge,
                                lat=plot.level$site.lat,
-                               long=plot.level$site.long)
+                               long=plot.level$site.long,
+                               notes=NA)
 
 ###remove duplicated values if they are present
 plot.level.thinned<-plot.level.thinned[!duplicated(plot.level.thinned),]
@@ -142,7 +143,8 @@ plot.level<-merge(plot.level, data.frame(plot=plot.level.thinned$plot, plot_id=p
 woody.cover<-data.frame(woody_cover_id=seq(1:length(plot.level$woody.cover)),
               plot_id=plot.level$plot_id,
               woody_cover_percent=plot.level$woody.cover,
-              date_collected=plot.level$year)
+              date_collected=plot.level$year,
+              notes=NA)
               
 
 ##############repeat in the same way for all environment variables
@@ -220,17 +222,20 @@ individual.level.trait$individual_id<-individual.level.thinned$individual_id
 SLA<-data.frame(SLA_id=seq(1:length(individual.level.trait$measured.sla))
                 ,individual_id=individual.level.trait$individual_id
                 ,SLA_mm2_mg=individual.level.trait$measured.sla
-                ,date_collected=individual.level.trait$year)
+                ,date_collected=individual.level.trait$year,
+                notes=NA)
 
 height<-data.frame(height_id=seq(1:length(individual.level.trait$measured.height))
                 ,individual_id=individual.level.trait$individual_id
                 ,height_mm=individual.level.trait$measured.height
-                ,date_collected=individual.level.trait$year)
+                ,date_collected=individual.level.trait$year,
+                notes=NA)
 
 leaf_area<-data.frame(height_id=seq(1:length(individual.level.trait$leaf.area.for.sla))
                       ,individual_id=individual.level.trait$individual_id
                       ,height_mm=individual.level.trait$leaf.area.for.sla
-                      ,date_collected=individual.level.trait$year)
+                      ,date_collected=individual.level.trait$year,
+                      notes=NA)
 
 write.clean.csv(projects)
 write.clean.csv(field_season)
