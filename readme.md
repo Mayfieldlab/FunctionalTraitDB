@@ -26,6 +26,22 @@ Below is the *tentative* timeline for completion of the database (pre-2018 field
 * Jun 29 = Functional trait datdabase is up-to-date to the best of everyone's knowledge
 * Recurring = Update the protocol
 
+## Helpful tutorials
+In this project we use a number of different softwares.  It may be helpful to familiarize yourself with all or some of them when working with the database.  For you convenience, here are some tutorials!
+
+* What is a database?
+
+* Git and Github
+	+ A simple introduction is here:
+		+ https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV
+	+ More advanced info can be found here:
+		+ Video: https://www.youtube.com/watch?v=1ffBJ4sVUb4
+		+ Text: https://swcarpentry.github.io/git-novice/
+
+* SQL
+
+
+
 ## Adding new projects
 
 Assign a new project a 4-letter code and sequential number identifier. For example: Watering project = **WATR1**. If another watering project is added later ten that proejct will be **WATR2**.
@@ -48,9 +64,19 @@ The files must be names exactly as listed below (in all lowercase) and have the 
 	+ project_id = **FKey** to *'projects'* table
 	+ year = a 4-integer year identifying the year of the field season *(e.g. 2018)*
 	+ crew = a text string listing the field crew with names separated by underscores *(e.g. JohnDwyer_ClaireWainwright)*
-	+ fs_min_temp_C = the minimum temperature in ^o^C for the field season
+	+ fs_min_temp_C = the minimum temperature in ^o^C for the field season  
+		+ Go to http://www.bom.gov.au/climate/data/index.shtml  
+		+ Fill out the data query form
+			1. Select 'Temperature', 'Daily', 'Minimum temperature'
+			2. Enter site location.  Select the nearest open bureau station, Select year. 
+			3. Click 'Get Data'
+			4. Click "1 year of data" to download csv file
 	+ fs_max_temp_C = the maximum temperature in ^o^C for the field season 
+		+ Follow steps as above, change obsercations to "maximum temperature"
 	+ fs_mean_precip_mm = the mean precipitaiton over the field season period.
+		+ Follow steps as above, Select data about "Rainfall"
+
+		
 
 * site.csv
 	+ site_id = unique integer for site **(PKey)**
