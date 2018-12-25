@@ -26,12 +26,12 @@ project.name<-"SURV1"
 
 ####Insert the name, email of the principal investigator
 
-researcher<-"JohnDwyer"
-email<-"j.dwyer2@uq.edu.au"
+researcher<-"ClaireWainwright"
+email<-"cewain@u.washington.edu"
 
 ####Project ID number
 
-project_id<-1
+project_id<-2
 
 
 ####set working directory to the designated project folder (no change required for this line)

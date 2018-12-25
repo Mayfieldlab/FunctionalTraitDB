@@ -1,2 +1,3 @@
-"field_season_id","project_id","year","crew","fs_max_temp_C","fs_min_temp_C","fs_mean_precip_mm"
-"1","1",2015,"ClaireWainwright_TomFlannagan_MaiaRaymundo",NA,NA,NA
+"","field_season_id","project_id","year","crew","notes"
+"1",1,2,2015,"ClaireWainwright",NA
+"2",1,2,2015,"TomFlannagan",NA
